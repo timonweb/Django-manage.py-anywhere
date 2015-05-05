@@ -4,7 +4,7 @@ Run manage.py commands anywhere. Find the closest to current path manage.py file
 # Installation is quick and simple
 One line installer:   
 ```
-cd /usr/local/lib && sudo wget https://raw.githubusercontent.com/timonweb/manage.py-anywhere/master/manage.py && sudo chmod u+x manage.py
+cd /usr/local/bin && sudo wget https://raw.githubusercontent.com/timonweb/manage.py-anywhere/master/manage.py && sudo chmod +x /usr/local/bin/manage.py
 ```
 
 # Usage
