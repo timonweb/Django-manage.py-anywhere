@@ -1,5 +1,8 @@
 #!/bin/bash
-# Install as: cd /usr/local/lib && sudo wget && sudo chmod u+x manage.py
+# Yes, this is not python file, but it has .py extension to make it sound as vanilla Django manage.py file.
+#
+# One line installer: 
+# cd /usr/local/lib && sudo wget https://raw.githubusercontent.com/timonweb/manage.py-anywhere/master/manage.py && sudo chmod u+x manage.py
 
 managepy_path=0
 while [[ "`pwd`" != '/' ]]; do
