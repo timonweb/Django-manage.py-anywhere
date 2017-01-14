@@ -2,7 +2,7 @@
 # Yes, this is not python file, but it has .py extension to make it sound as vanilla Django manage.py file.
 #
 # One line installer: 
-# cd /usr/local/bin && sudo wget https://raw.githubusercontent.com/timonweb/manage.py-anywhere/master/manage.py && sudo chmod +x /usr/local/bin/manage.py
+# pip install django_managepy_anywhere
 
 managepy_path=0
 while [[ "`pwd`" != '/' ]]; do
