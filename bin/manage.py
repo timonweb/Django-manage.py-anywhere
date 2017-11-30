@@ -1,21 +1,35 @@
-#!/bin/bash
-# Yes, this is not python file, but it has .py extension to make it sound as vanilla Django manage.py file.
-#
-# One line installer: 
-# pip install django_managepy_anywhere
+#!/usr/bin/env python
+import os
+import subprocess
+import sys
 
-managepy_path=0
-while [[ "`pwd`" != '/' ]]; do
-	managepy_path=$(find $(pwd) -type f -name "manage.py" -print | head -n 1)
-	if [[ -n $managepy_path ]]; then
-	    echo "Running 'python $managepy_path $@' command:"
-		python $managepy_path $@
-		break
-	else
-		cd ..
-	fi
-done 
 
-if [[ managepy_path == 0 ]]; then
-	echo 'Cant find manage.py'
-fi
+def main():
+    managepy_path = find_managepy()
+    if managepy_path:
+        command = ' '.join(['python', managepy_path] + sys.argv[1:])
+        run_cmd(command)
+    else:
+        print("Couldn't find manage.py")
+
+
+def find_managepy():
+    # We start in current directory
+    path = '.'
+    # We will stop at the root directory
+    while os.path.split(os.path.abspath(path))[1]:
+        check_path = os.path.join(path, 'manage.py')
+        if os.path.exists(check_path):
+            return os.path.abspath(check_path)
+        # Go level up
+        path = os.path.join('..', path)
+
+
+def run_cmd(command):
+    try:
+        subprocess.call(command, shell=True)
+    except KeyboardInterrupt:
+        print("Command aborted")
+
+
+main()

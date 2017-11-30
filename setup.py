@@ -1,12 +1,13 @@
 from distutils.core import setup
+
 setup(
-  name = 'django_managepy_anywhere',
-  version = '1.0',
-  description = 'Run your django manage.py commands from any directory within a project',
-  author = 'Tim Kamanin',
-  author_email = 'tim@timonweb.com',
-  url = 'https://github.com/timonweb/Django-manage.py-anywhere', # use the URL to the github repo
-  download_url = 'https://github.com/timonweb/Django-manage.py-anywhere/archive/master.zip', # I'll explain this in a second
-  keywords = ['django', 'management', 'commands'], # arbitrary keywords
-  scripts=['bin/manage.py'],
+    name='django_managepy_anywhere',
+    version='2.0',
+    description='Allows to run manage.py commands from any level of the Django project by typing "manage.py <subcommand>"',
+    author='Tim Kamanin',
+    author_email='tim@timonweb.com',
+    url='https://timonweb.com/oss/django-managepy-anywhere/',
+    download_url='https://github.com/timonweb/Django-manage.py-anywhere/archive/master.zip',
+    keywords=['django', 'management', 'commands'],
+    scripts=['bin/manage.py'],
 )
