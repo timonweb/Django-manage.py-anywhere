@@ -1,6 +1,8 @@
 # Django-manage.py-anywhere
 Run manage.py commands from any directory of your Django project.
 
+> NOTE: This tool doesn't need any further updates, so don't worry if you see that it hasn't got any updates recently. It doesn't need any. It just works with any Django version. Enjoy!
+
 # Installation is quick and simple
 One line installer:   
 ```
