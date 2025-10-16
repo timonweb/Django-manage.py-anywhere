@@ -1,3 +1,5 @@
+> **2025 UPDATE:** I've come up with an even better idea to solve the inconvenience of having to type `python manage.py` every time. Let's just replace it with the `django` or, even shorter, the `dj` command! That's what my latest package, [Easy Django CLI](https://github.com/timonweb/easy-django-cli), does. I recommend you try it at first. Check it out here: [https://github.com/timonweb/easy-django-cli](https://github.com/timonweb/easy-django-cli).
+
 # Django-manage.py-anywhere
 Run manage.py commands from any directory of your Django project.
 
